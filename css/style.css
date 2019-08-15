@@ -2,12 +2,10 @@
     background-color: #ccc;
     height: 500px;
     display: flex;
-    flex-direction: row; /* column, row, column-reverse, row-reverse */
-    flex-wrap: nowrap; /* wrap, nowrap, wrap-reverse */
     flex-flow: row nowrap; /*junção do direction com o wrap */
     justify-content: flex-start; /* flex-end, flex-start , space-around, center, space-between*/
-    align-items: flex-start; /* flex-end, center, stretch, flex-start, baseline*/
-    align-content: stretch; /* stretch, flex-end, flex-start , space-around, center, space-between*/
+    align-items: stretch; /* flex-end, center, stretch, flex-start, baseline*/
+    align-content: flex-start; /* stretch, flex-end, flex-start , space-around, center, space-between*/
 }
 
 .item{
@@ -15,4 +13,26 @@
     color: #fff;
     padding: 20px;
     margin: 5px;
+    height: 30px;
+
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 300px;
+    /*ou de forma resumida: */ flex: 0 1 300px;
+}
+
+.article-01 {
+    flex-grow: 3;
+    order: 3;
+}
+.article-02 {
+    order: 1; 
+    align-self: auto;
+}
+.article-03 {
+    order: 2;
+}
+.article-04 {
+    order: 4;
+    flex-shrink: 3;
 }
